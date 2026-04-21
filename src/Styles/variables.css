@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800;900&family=DM+Sans:wght@300;400;500;600;700&display=swap');
+
+:root {
+  color-scheme: light;
+
+  /* Clinical palette */
+  --color-medical-teal: #14b8a6;
+  --color-medical-teal-soft: rgba(20, 184, 166, 0.14);
+  --color-success: #22c55e;
+  --color-success-soft: rgba(34, 197, 94, 0.16);
+
+  --color-slate-950: #07111f;
+  --color-slate-900: #0f172a;
+  --color-slate-800: #1e293b;
+  --color-slate-700: #334155;
+  --color-slate-600: #475569;
+  --color-slate-500: #64748b;
+  --color-slate-400: #94a3b8;
+
+  --color-bg: #eaf4f5;
+  --color-bg-white: #ffffff;
+  --color-bg-section: #f4fbfb;
+  --color-surface: rgba(255, 255, 255, 0.58);
+  --color-surface-strong: rgba(255, 255, 255, 0.82);
+  --color-surface-border: rgba(255, 255, 255, 0.42);
+  --color-surface-line: rgba(148, 163, 184, 0.16);
+
+  --color-navy: #0d2b5e;
+  --color-navy-mid: #16427f;
+  --color-blue-card: #1e749b;
+  --color-blue-field: #1c6d92;
+
+  --color-green: var(--color-medical-teal);
+  --color-green-dark: #0f9488;
+
+  --color-text-primary: var(--color-slate-900);
+  --color-text-body: var(--color-slate-700);
+  --color-text-muted: var(--color-slate-500);
+  --color-text-light: #f8fafc;
+
+  --color-border: rgba(148, 163, 184, 0.22);
+  --color-border-light: rgba(255, 255, 255, 0.34);
+
+  --shadow-card: 0 16px 42px rgba(15, 23, 42, 0.1);
+  --shadow-card-lg: 0 30px 70px rgba(15, 23, 42, 0.14);
+  --shadow-nav: 0 18px 48px rgba(8, 15, 29, 0.14);
+  --shadow-glass: 0 24px 64px rgba(15, 23, 42, 0.12);
+
+  --radius-sm: 10px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  --radius-xl: 34px;
+  --radius-pill: 999px;
+
+  --section-py: 96px;
+  --container: 1280px;
+
+  --font-display: 'Barlow Condensed', sans-serif;
+  --font-body: 'DM Sans', sans-serif;
+
+  --transition: 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+}

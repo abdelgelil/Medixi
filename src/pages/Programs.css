@@ -1,0 +1,10 @@
+.programs-list-card {
+  height: 100%;
+}
+
+.programs-list-card__audience {
+  margin-top: 18px;
+  color: var(--color-navy);
+  font-size: 14px;
+  font-weight: 700;
+}

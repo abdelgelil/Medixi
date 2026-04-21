@@ -1,0 +1,19 @@
+.glass-card {
+  position: relative;
+  border-radius: 28px;
+  padding: 24px;
+  transition: transform var(--transition), box-shadow var(--transition-slow), border-color var(--transition);
+  will-change: transform;
+}
+
+.glass-card:hover,
+.glass-card:focus-within {
+  transform: translateY(-6px);
+  box-shadow: 0 28px 68px rgba(15, 23, 42, 0.16);
+  border-color: rgba(255, 255, 255, 0.64);
+}
+
+.glass-card > * {
+  position: relative;
+  z-index: 1;
+}

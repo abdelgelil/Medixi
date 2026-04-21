@@ -1,0 +1,10 @@
+.registration-summary-card {
+  height: 100%;
+}
+
+.registration-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 18px;
+}

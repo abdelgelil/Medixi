@@ -1,0 +1,53 @@
+.calendar-shell {
+  background: var(--color-bg-white);
+  border: 1px solid var(--color-border-light);
+  border-radius: var(--radius-xl);
+  padding: 24px;
+  box-shadow: var(--shadow-card);
+}
+
+.fc {
+  --fc-border-color: var(--color-border);
+  --fc-page-bg-color: var(--color-bg-white);
+  --fc-neutral-bg-color: var(--color-bg-section);
+  --fc-button-bg-color: var(--color-navy);
+  --fc-button-border-color: var(--color-navy);
+  --fc-button-hover-bg-color: var(--color-navy-mid);
+  --fc-button-hover-border-color: var(--color-navy-mid);
+  --fc-button-active-bg-color: var(--color-blue-card);
+  --fc-button-active-border-color: var(--color-blue-card);
+  --fc-event-bg-color: var(--color-blue-card);
+  --fc-event-border-color: var(--color-blue-card);
+  --fc-event-text-color: #fff;
+  --fc-today-bg-color: rgba(61, 219, 111, 0.12);
+}
+
+.fc .fc-toolbar-title {
+  font-family: var(--font-display);
+  color: var(--color-navy);
+  text-transform: uppercase;
+}
+
+.fc .fc-col-header-cell-cushion,
+.fc .fc-daygrid-day-number {
+  color: var(--color-navy);
+}
+
+.fc .fc-event {
+  cursor: pointer;
+  border-radius: 10px;
+  padding: 2px 4px;
+}
+
+.calendar-event-card {
+  display: grid;
+  gap: 16px;
+}
+
+.calendar-event-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  color: var(--color-text-muted);
+  font-size: 14px;
+}

@@ -1,0 +1,11 @@
+.layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.layout__main {
+  flex: 1;
+  /* Push content below the fixed navbar (navbar height ≈ 72px) */
+  padding-top: 72px;
+}

@@ -1,0 +1,85 @@
+.speciality-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 240px;
+  padding: 28px;
+  border-radius: 28px;
+  text-decoration: none;
+  overflow: hidden;
+  transition: transform var(--transition), box-shadow var(--transition-slow), border-color var(--transition);
+}
+
+.speciality-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 28px 68px rgba(15, 23, 42, 0.16);
+  border-color: rgba(255, 255, 255, 0.6);
+}
+
+.speciality-card__top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 30px;
+  position: relative;
+  z-index: 1;
+}
+
+.speciality-card__number {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--color-slate-500);
+}
+
+.speciality-card__icon {
+  width: 58px;
+  height: 58px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.6);
+  color: var(--color-medical-teal);
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.08);
+}
+
+.speciality-card__body {
+  position: relative;
+  z-index: 1;
+}
+
+.speciality-card__body h3 {
+  font-size: clamp(1.4rem, 2vw, 2rem);
+  line-height: 1.05;
+  color: var(--color-text-primary);
+  margin-bottom: 12px;
+}
+
+.speciality-card__body p {
+  color: var(--color-text-body);
+  line-height: 1.52;
+  font-size: 1rem;
+  max-width: 270px;
+}
+
+.speciality-card__arrow {
+  position: absolute;
+  right: 22px;
+  bottom: 22px;
+  width: 42px;
+  height: 42px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.72);
+  color: var(--color-text-primary);
+  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.08);
+  transition: transform var(--transition), background var(--transition), color var(--transition);
+}
+
+.speciality-card:hover .speciality-card__arrow {
+  transform: rotate(45deg);
+  background: var(--color-medical-teal);
+  color: white;
+}
