@@ -150,14 +150,10 @@ export default function Footer() {
                 </a>
               </li>
               <li style={{ marginTop: '12px' }}>
-                <a href="mailto:noha.ghanem@icomgroup.org" className="footer__col-link">
-                  noha.ghanem@icomgroup.org
-                </a>
+                
               </li>
               <li>
-                <a href="tel:+201281677722" className="footer__col-link">
-                  +20 128 167 7722
-                </a>
+                
               </li>
             </ul>
           </div>
