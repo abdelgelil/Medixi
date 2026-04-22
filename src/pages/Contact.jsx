@@ -33,14 +33,14 @@ export default function Contact() {
             <div className="info-card__tag">Contact</div>
             <h3>Salma Khairy</h3>
             <p><a className="contact-link" href="mailto:salma.khairy@icomgroup.org">salma.khairy@icomgroup.org</a></p>
-            <p className="info-card__meta"><a className="contact-link" href="tel:+201050407254">+2 01050407254</a></p>
+            
           </article>
 
           <article className="info-card">
             <div className="info-card__tag">Contact</div>
             <h3>Noha Ghanem</h3>
             <p><a className="contact-link" href="mailto:noha.ghanem@icomgroup.org">noha.ghanem@icomgroup.org</a></p>
-            <p className="info-card__meta"><a className="contact-link" href="tel:+201281677722">+20 12 81677722</a></p>
+           
           </article>
         </div>
       </section>

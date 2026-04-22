@@ -1,5 +1,6 @@
 import FullCalendar from '@fullcalendar/react';
 import dayGridPlugin from '@fullcalendar/daygrid';
+import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { events } from '../data/siteData';
 import './PageStyles.css';
@@ -15,6 +16,31 @@ function formatDate(dateString) {
 
 export default function Calendar() {
   const navigate = useNavigate();
+  const [isMobile, setIsMobile] = useState(() => {
+    if (typeof window === 'undefined') {
+      return false;
+    }
+
+    return window.matchMedia('(max-width: 640px)').matches;
+  });
+
+  useEffect(() => {
+    if (typeof window === 'undefined') {
+      return undefined;
+    }
+
+    const mediaQuery = window.matchMedia('(max-width: 640px)');
+    const handleChange = (event) => {
+      setIsMobile(event.matches);
+    };
+
+    setIsMobile(mediaQuery.matches);
+    mediaQuery.addEventListener('change', handleChange);
+
+    return () => {
+      mediaQuery.removeEventListener('change', handleChange);
+    };
+  }, []);
 
   const calendarEvents = events.map((event) => ({
     title: event.title,
@@ -55,13 +81,18 @@ export default function Calendar() {
         <div className="container">
           <div className="calendar-shell">
             <FullCalendar
+              key={isMobile ? 'calendar-mobile' : 'calendar-desktop'}
               plugins={[dayGridPlugin]}
-              initialView="dayGridMonth"
+              initialView={isMobile ? 'dayGridWeek' : 'dayGridMonth'}
               headerToolbar={{
-                left: 'prev,next today',
+                left: isMobile ? 'prev,next' : 'prev,next today',
                 center: 'title',
                 right: '',
               }}
+              dayHeaderFormat={isMobile ? { weekday: 'short' } : { weekday: 'long' }}
+              titleFormat={isMobile ? { month: 'short', day: 'numeric', year: 'numeric' } : { month: 'long', year: 'numeric' }}
+              dayMaxEventRows={isMobile ? 2 : 3}
+              fixedWeekCount={!isMobile}
               events={calendarEvents}
               height="auto"
               eventDisplay="block"
