@@ -145,9 +145,7 @@ export default function Footer() {
                 </a>
               </li>
               <li>
-                <a href="tel:+201050407254" className="footer__col-link">
-                  +2 010 504 07254
-                </a>
+                
               </li>
               <li style={{ marginTop: '12px' }}>
                 
